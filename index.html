@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Book Explorer</title>
+</head>
+<body>
+    <nav class="bg-amber-900 text-white py-4 flex items-center justify-between px-6 md:px-12 lg:px-24 border-b-2 border-amber-700">
+        <span class="text-2xl font-extrabold tracking-tight">Igitabo</span>
+        <ul class="nav_links flex gap-6 text-sm font-semibold">
+            <li> <a href="#" class="hover:text-amber-300 transition-colors">Home</a></li>
+            <li> <a href="#books-grid" class="hover:text-amber-300 transition-colors">Books</a> </li>
+            <li> <a href="#favorites-grid" class="hover:text-amber-300 transition-colors">Favorites</a></li>
+        </ul>        
+    </nav>
+
+    <main>
+        <section class="hero_section bg-amber-800 flex flex-col justify-center items-center text-white px-6 min-h-screen">
+            <h1 class="text-3xl font-bold mb-8">Welcome to <span class="text-amber-300 tracking-tight">Igitabo</span></h1>
+            <p class="text-lg text-amber-100 text-center mx-auto mb-8">
+                Browse your favourite books - All in one place</p>
+            <a href="#books-grid" class="bg-amber-300 text-amber-900 font-bold px-8 py-3 rounded-full hover:bg-white transition-colors">
+                Browse Books
+            </a>
+        </section>
+    
+    
+        <section class="grid_section bg-amber-700 text-white text-center px-6 md:px-12 lg:px-20 py-8">
+            <h2 class="text-3xl font-bold mb-4 text-start">Top books</h2>
+            <p class="text-start text-amber-100 mb-8">A curated list of must-read books.</p>
+            <div id="books-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl shadow p-4 animate-pulse">
+                    <div class="bg-gray-200 h-48 rounded mb-4"></div>
+                    <div class="bg-gray-200 h-4 rounded mb-2 w-3/4"></div>
+                    <div class="bg-gray-200 h-3 rounded w-1/2"></div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section class="favorites_section bg-gray-700 text-white text-center px-6 md:px-12 lg:px-20 py-8">
+            <h2 class="text-3xl font-bold mb-4 text-start">My Favorites</h2>
+            <p class="text-start mb-8">Books you have saved will appear here.</p>
+            <div id="favorites-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-xl shadow p-4 animate-pulse">
+                    <div class="bg-gray-200 h-48 rounded mb-4"></div>
+                    <div class="bg-gray-200 h-4 rounded mb-2 w-3/4"></div>
+                    <div class="bg-gray-200 h-3 rounded w-1/2"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="flex flex-col md:flex-row bg-amber-900 justify-between text-white px-6 md:px-12 lg:px-20 py-4">
+        <div class="flex justify-between gap-8 items-center">
+            <span class="text-2xl font-extrabold tracking-tight">Igitabo</span>
+            <ul class="nav_links flex gap-6 text-sm font-semibold">
+                <li> <a href="#" class="hover:text-amber-300 transition-colors">Home</a></li>
+                <li> <a href="#books-grid" class="hover:text-amber-300 transition-colors">Books</a> </li>
+                <li> <a href="#favorites-grid" class="hover:text-amber-300 transition-colors">Favorites</a></li>
+            </ul>        
+        </div>
+        <p class="text-xs py-2 md:text-sm text-center font-bold">Copyright &copy; 2024 Book Explorer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
