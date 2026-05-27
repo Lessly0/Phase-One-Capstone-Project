@@ -52,12 +52,11 @@ function showFavorites(){
     favoritesData.forEach(book => {
         favoritesgrid.innerHTML += `
             <div class="bg-white p-4 rounded-xl shadow-xl text-black">
+                <img src="#" alt="${book.title}" class="w-full h-52 object-cover rounded-t-xl border-2 border-gray-800">
                 <h3 class="font-bold">${book.title}</h3>
                 <p>By: ${book.author}</p>
 
-                <button
-                    class="mt-2 bg-red-600 text-white px-3 py-2 rounded-xl"
-                    data-remove="${book.id}">
+                <button class="mt-2 bg-red-500 text-white p-2 rounded-xl" data-remove="${book.id}">
                     Remove
                 </button>
             </div>
@@ -73,7 +72,7 @@ document.addEventListener("click", (event) => {
 
         removeFavorite(bookId);
 
-        renderFavorites();
+        showFavorites();
     }
 });
 
