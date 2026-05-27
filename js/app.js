@@ -75,7 +75,6 @@ document.addEventListener("click", (event) => {
 });
 
 // New showBooks function that fetches data from the API
-
 async function showBooks(query="javascript") {
     booksgrid.innerHTML = `<p>Loading books...</p>`; 
     const books = await fetchBooks(query);
@@ -98,6 +97,15 @@ async function showBooks(query="javascript") {
     });
 }
 
+// Search functionality
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
-showBooks(query="javascript");
+searchBtn.addEventListener("click", () => {
+    const query = searchInput.value;
+    if (query.trim() === "") return;
+    showBooks(query);
+});
+
+showBooks();
 showFavorites();
