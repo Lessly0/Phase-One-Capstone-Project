@@ -111,7 +111,7 @@ searchBtn.addEventListener("click", () => {
     showBooks(query);
 });
 
-// New addEvebtListener for adding favorites with API data
+// New addEventListener for adding favorites with API data
 document.addEventListener("click", (event) => {
     if (event.target.dataset.id) {
         const bookId = event.target.dataset.id;
