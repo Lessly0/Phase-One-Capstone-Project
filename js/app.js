@@ -17,6 +17,7 @@ const favoritesgrid= document.getElementById('favorites-grid');
 
 import { fetchData } from "./fetch.js";
 
+// Showing books on the page
 function showBooks(){
     booksgrid.innerHTML ="";
     booksData.forEach(book => {
@@ -35,6 +36,7 @@ function showBooks(){
 
 };
 
+// Adding books to favorites
 document.addEventListener("click", (event) => {
     if (event.target.dataset.id) {
         const bookId = Number(event.target.dataset.id);
@@ -43,10 +45,11 @@ document.addEventListener("click", (event) => {
         );
 
         addFavorite(selectedBook);
-        renderFavorites();
+        showFavorites();
     }
 });
 
+// Displaying favorite books
 function showFavorites(){
     const favoritesData = getFavorites();
     favoritesgrid.innerHTML = "";
@@ -66,6 +69,7 @@ function showFavorites(){
     });
 };
 
+// Removing books from favorites
 document.addEventListener("click", (event) => {
     if (event.target.dataset.remove) {
         const bookId = Number(event.target.dataset.remove);
@@ -105,6 +109,21 @@ searchBtn.addEventListener("click", () => {
     const query = searchInput.value;
     if (query.trim() === "") return;
     showBooks(query);
+});
+
+// New addEvebtListener for adding favorites with API data
+document.addEventListener("click", (event) => {
+    if (event.target.dataset.id) {
+        const bookId = event.target.dataset.id;
+        const book = {
+            id: bookId,
+            title: event.target.dataset.title,
+            author: event.target.dataset.author
+        };
+
+        addFavorite(book);
+        showFavorites();
+    }
 });
 
 showBooks();
