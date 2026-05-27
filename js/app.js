@@ -1,3 +1,9 @@
+import {
+    getFavorites,
+    addFavorite,
+    removeFavorite
+} from "./favorites.js";
+
 const booksgrid= document.getElementById('books-grid');
 const favorites= document.getElementById('favorites-grid');
 
