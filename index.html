@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./js/app.js"></script>
     <title>Book Explorer</title>
 </head>
 <body>
@@ -30,12 +31,7 @@
         <section class="grid_section bg-amber-700 text-white text-center px-6 md:px-12 lg:px-20 py-8">
             <h2 class="text-3xl font-bold mb-4 text-start">Top books</h2>
             <p class="text-start text-amber-100 mb-8">A curated list of must-read books.</p>
-            <div id="books-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl shadow p-4 animate-pulse">
-                    <div class="bg-gray-200 h-48 rounded mb-4"></div>
-                    <div class="bg-gray-200 h-4 rounded mb-2 w-3/4"></div>
-                    <div class="bg-gray-200 h-3 rounded w-1/2"></div>
-                </div>
+            <div id="books-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             </div>
         </section>
     
@@ -43,12 +39,7 @@
         <section class="favorites_section bg-gray-700 text-white text-center px-6 md:px-12 lg:px-20 py-8">
             <h2 class="text-3xl font-bold mb-4 text-start">My Favorites</h2>
             <p class="text-start mb-8">Books you have saved will appear here.</p>
-            <div id="favorites-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl shadow p-4 animate-pulse">
-                    <div class="bg-gray-200 h-48 rounded mb-4"></div>
-                    <div class="bg-gray-200 h-4 rounded mb-2 w-3/4"></div>
-                    <div class="bg-gray-200 h-3 rounded w-1/2"></div>
-                </div>
+            <div id="favorites-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             </div>
         </section>
 
@@ -66,5 +57,6 @@
         </div>
         <p class="text-xs py-2 md:text-sm text-center font-bold">Copyright &copy; 2024 Book Explorer. All rights reserved.</p>
     </footer>
+    
 </body>
 </html>
