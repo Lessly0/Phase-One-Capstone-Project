@@ -1,6 +1,6 @@
-export async function fetchData() {
+export async function fetchData(query="javascript") {
     try {
-        const response = await fetch("https://openlibrary.org/search.json?q=${javascript}");
+        const response = await fetch("https://openlibrary.org/search.json?q=${query}");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
