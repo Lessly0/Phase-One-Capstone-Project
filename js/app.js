@@ -7,13 +7,15 @@ import {
 const booksgrid= document.getElementById('books-grid');
 const favoritesgrid= document.getElementById('favorites-grid');
 
-const booksData = [
-    { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald'},
-    { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee'},
-    { id: 3, title: '1984',author: 'George Orwell'},
-    { id: 4, title: '1985',author: 'Georges Orwelln'},
+// const booksData = [
+//     { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald'},
+//     { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee'},
+//     { id: 3, title: '1984',author: 'George Orwell'},
+//     { id: 4, title: '1985',author: 'Georges Orwelln'},
 
-];
+// ];
+
+import { fetchData } from "./fetch.js";
 
 function showBooks(){
     booksgrid.innerHTML ="";
@@ -75,6 +77,8 @@ document.addEventListener("click", (event) => {
         showFavorites();
     }
 });
+
+
 
 showBooks();
 showFavorites();
